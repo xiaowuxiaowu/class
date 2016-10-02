@@ -1,0 +1,105 @@
+body{
+	margin:0;
+	padding:0;
+	background-color: #F2F2F2;
+}
+.signresult{
+	font-size: 16px;
+}
+.signresult .head{
+	box-shadow:0px 2px 2px #CCCCCC;
+	-webkit-box-shadow:0px 2px 2px #CCCCCC;
+	background:#FFFFFF;
+	text-align: center;
+}
+.signresult .head .leftimg{
+	padding-left: 10px;
+	padding-top: 13px;
+	padding-bottom: 15px;
+	width: 56px;
+	float: left;
+	vertical-align: bottom;
+}
+.signresult .head .text{
+	height:50px;
+	line-height:50px;
+	margin:0px 56px;
+}
+.signresult .head .right{
+	position:absolute;
+	top:12px;
+	right:20px;
+}
+.signresult .main .charts{
+	
+	padding:0px;
+	background-color:#FFFFFF;
+	display:absolute;
+	border-top:1px solid #868686;
+}
+.signresult .main .charts .list .student{
+	border-top:1px solid #F2F2F2;
+	padding:10px;
+	height:55px;
+}
+.signresult .main .charts .list .student ul{
+	padding:0;
+}
+.signresult .main .charts .list .student ul li{
+	list-style:none;
+	float:left;
+	padding:0px 4px;
+}
+.signresult .main .charts .list .student ul li .no{
+	height:34px;
+	width:24px;
+	line-height:35px;
+	font-size:33px;
+	text-align:center;
+}
+.signresult .main .charts .list .student ul li .image img{
+	border-radius:17px;
+	-webkit-border-radius:17px;
+}
+.signresult .main .charts .list .student ul li .name{
+	line-height:34px;
+}
+.signresult .main .charts .list .student .num{
+	float:right;
+	float:right;
+	height:34px;
+	line-height:34px;
+}
+a{
+	color: #333333;
+}
+a:hover{
+	color: #009CF3;
+}
+a:link{
+	text-decoration: none;
+}
+
+.hiden{
+	display: none;
+}
+
+.clicked{
+	color:#009CF3;
+	border-bottom:3px solid #009CF3;
+}
+
+.trues{
+	background-color:#00C484;
+}
+.falses{
+	background-color:#FF4A4A;
+}
+.big{
+	font-size:24px;
+	color:#009CF3;
+}
+.small{
+	font-size:14px;
+	opacity:0.5;
+}

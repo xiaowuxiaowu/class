@@ -1,0 +1,310 @@
+body{
+	background-color: #F2F2F2;
+}
+.signclass{
+	font-size: 16px;
+}
+.signclass .head{
+	box-shadow:0px 2px 2px #CCCCCC;
+	-webkit-box-shadow:0px 2px 2px #CCCCCC;
+	background:#FFFFFF;
+	text-align: center;
+}
+.signclass .head .leftimg{
+	padding-left: 10px;
+	padding-top: 13px;
+	padding-bottom: 15px;
+	width: 56px;
+	float: left;
+	vertical-align: bottom;
+}
+.signclass .head .rightimg{
+	margin-right: 10px;
+	padding-top: 11px;
+	padding-bottom: 15px;
+	width: 19px;
+	height:19px;
+	float: right;
+}
+.signclass .head .main{
+	margin-left: 58px;
+	margin-right:58px;
+	line-height:47px;
+	vertical-align:middle;
+}
+.signclass .head .main span{
+	display:inline-block;
+	text-align: center;
+	width:48%;
+}
+
+.signclass .head .cling span{
+	color:#009CF3;
+}
+.signclass .row .body{
+	margin: 10px 0px;
+}
+.signclass .row .body .signname{
+	margin: 0px 10px;
+}
+.signclass .row .body .signname .form-group{
+	overflow: hidden;
+}
+.signclass .row .body .signname .form-group .left{
+	float:left;
+	height:34px;
+	line-height:34px;
+	vertical-align:middle;
+}
+.signclass .row .body .signname .form-group .name{
+	margin-left:70px;
+	padding-left:10px;
+    height:34px;
+	line-height:34px;
+	vertical-align:middle;
+	background-color:#FFFFFF
+}
+.signclass .row .body .signbody .wrap{
+	
+}
+.signclass .row .body .signbody .wrap .all{
+	width: 100%;
+}
+.signclass .row .body .signbody .wrap .all .alltop{
+	position: relative;
+	margin-top: 10px;
+	height:55px;
+	line-height:55px;
+	vertical-align:middle;
+	background-color: #FFFFFF;
+}
+.signclass .row .body .signbody .wrap .all .alltop .signico{
+	display: inline-block;
+	margin-left: 10px;
+}
+.signclass .row .body .signbody .wrap .all .alltop .signname{
+	display: inline-block;
+	margin:0;
+}
+.signclass .row .body .signbody .wrap .all .alltop .signnum{
+	margin-right: 10px;
+	line-height: 55px;
+	display: inline-block;
+	float:right;
+	vertical-align: middle;
+
+}
+.signclass .row .body .signbody .wrap .all .detail{
+	margin:0px 10px;
+}
+.signclass .row .body .signbody .wrap .all .detail table{
+	margin-top: 10px;
+	width:100%;
+}
+.signclass .row .body .signbody .wrap .all .detail table thead{
+	height:35px;
+	line-height: 35px;
+	background-color: #009CF3;
+}
+.signclass .row .body .signbody .wrap .all .detail table thead tr th{
+	text-align: center;
+	color:#FFFFFF;
+}
+.signclass .row .body .signbody .wrap .all .detail table tbody{
+	background-color: #FFFFFF;
+	width: 100px;
+	border-left:1px solid #E4E4E4;
+	border-right:1px solid #E4E4E4;
+}
+.signclass .row .body .signbody .wrap .all .detail table tbody tr td{
+	height:40px;
+	line-height: 40px;
+	vertical-align: middle;
+	text-align: center;
+	border-bottom:1px solid #E4E4E4;
+}
+.pushresult{
+	font-size: 16px;
+}
+.pushresult .row .top{
+	padding:0px 10px;
+	height:50px;
+	background-color:#FFFFFF;
+	box-shadow:0px 2px 2px #CCCCCC;
+	-webkit-box-shadow:0px 2px 2px #CCCCCC;
+}
+.pushresult .row .top .all .left{
+	float:left;
+	height:50px;
+	line-height:50px;
+	vertical-align:middle;
+	display:inline-block;
+	
+}
+.pushresult .row .top .all  .mid{
+	margin:0px 60px;
+	line-height:50px;
+	vertical-align:middle;
+	text-align:center;
+
+}
+.pushresult .row .detail {
+	margin-top:10px;
+}
+
+.pushresult .row .detail .paname{
+	height:53px;
+	padding:0px 10px;
+	line-height:53px;
+
+	background-color:#FFFFFF;
+}
+.pushresult .row .detail .paname .num{
+	float:right;
+}
+.pushresult .row .detail .main{
+	margin:10px
+}
+.pushresult .row .detail .main .cont{
+	padding-left:33px;
+}
+.pushresult .row .detail .main .tag{
+	float:left;
+	height:20px;
+	line-height:20px;
+	vertical-align:middle;
+	padding-top:0px;
+	margin-right:5px;
+}
+.pushresult .row .detail .main .tag span{
+	padding: 0px 1px;
+	border:1px solid #009CF3;
+	color:#009CF3;
+	font-size: 12px;
+}
+.pushresult .row .detail .main .aa{
+	margin-top:10px;
+	padding-left:33px;
+}
+.pushresult .row .detail .main .option{
+	margin-top:10px;
+	padding-left:33px;
+}
+.pushresult .row .detail .main .option .line{
+	position:relative;
+	height:19px;
+	width:230px;
+	background-color:#FFFFFF;
+}
+.pushresult .row .detail .main .option .line .num{
+	position:absolute;
+	right:-40px;
+}
+.pushresult .row .detail .main .option .line .inline{
+	height:19px;
+	width:0px;
+	background-color: #009CF3;
+	transition: width ease-in 1s;
+    -webkit-transition: width ease-in 1s;/* chrome浏览器*/
+}
+.pushresult .row .detail .left{
+	margin:30px 20px;
+	float:left;
+	width:108px;
+	height:35px;
+	line-height:35px;
+	vertical-align:middle;
+	text-align:center;
+	border:1px solid #D7D7D7;
+	border-radius:5px;
+	-webkit-border-radius:5px;
+	background-color: #009CF3;
+	color:#FFFFFF;
+}
+.pushresult .row .detail .left:hover{
+	background-color: #1E6FFC;
+}
+.pushresult .row .detail .next{
+	margin:30px 20px;
+	float:right;
+	width:108px;
+	height:35px;
+	line-height:35px;
+	vertical-align:middle;
+	text-align:center;
+	border:1px solid #D7D7D7;
+	border-radius:5px;
+	-webkit-border-radius:5px;
+	background-color: #009CF3;
+	color:#FFFFFF;
+}
+.pushresult .row .detail .next:hover{
+	background-color: #1E6FFC;
+}
+.quenum{
+	top:51px;
+	position: absolute;
+	width: 100%;
+	padding: 20px;
+	background-color: #FFFFFF;
+}
+.quenum .list{
+	width: 100%;
+}
+
+.quenum .list .num{
+	display: inline-block;
+	margin-bottom:10px;
+	width: 50px;
+	height:50px;
+	line-height: 50px;
+	vertical-align: middle;
+	border:2px solid #E4E4E4;
+	border-radius: 25px;
+	-webkit-border-radius: 25px;
+	text-align: center;
+}
+.quenum .list .num:hover{
+	background-color: #009CF3;
+}
+.cloth{
+	position:absolute;
+	left:0;
+	right:0;
+	top:50px;
+	bottom:0;
+	background-color:#000000;
+	opacity:0.1;
+}
+a{
+	color: #333333;
+}
+a:hover{
+	color: #009CF3;
+}
+a:link{
+	text-decoration: none;
+}
+
+.hiden{
+	display: none;
+}
+.bcolor{
+	color: #009CF3;
+}
+.rcolor{
+	color: #FF0000;
+}
+.gcolor{
+	color:#22A940;
+}
+.clicked{
+	color:#009CF3;
+	border-bottom:3px solid #009CF3;
+}
+.chong{
+	color: #009CF3;
+}
+.gren{
+	color:#20B944;
+}

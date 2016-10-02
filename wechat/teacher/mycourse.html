@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+  <title>微课堂</title>
+
+  <!-- Bootstrap -->
+  <link href="../public/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="../public/css/mycourse.css">
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+    <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+  
+</head>
+<body>
+  <!-- begin 外部容器 -->
+  <div class="container-fluid ownercourse">
+    <div class="row">
+      <div class="top">
+        <div class="back">
+          <span><a href="teacher.html"><返回</a></span>
+        </div>
+        <div class="classname">
+          <div class="left" id="cname"><span>软件工程</span></div>
+          <div class="change" id="iname">
+            <input type="text" name="" autofocus="autofocus">
+          </div>
+          <div class="bb " onclick="savechang();" id="savechang">
+            <span class="glyphicon glyphicon-floppy-disk"></span>
+          </div>
+          <div class="aa" onclick="chang();" id="chang">
+            <img src="../public/img/16.png" width="18" height="18">
+          </div>
+        </div>
+        <div class="teacher">
+          <span class="mar">教师：唐兵</span>
+          <span>学生：100人</span>
+          <div class="digit">
+            <span>课程码：1204</span>
+          </div>
+        </div>
+      </div>
+      <div class="middle">
+        <div class="sign click" id="signdo" onclick="sign();">
+          <span>功能操作</span>
+        </div>
+        <div class="do" id="dosign" onclick="dopack();">
+          <span>所有课堂</span>
+        </div>
+      </div>
+      <div class="function" id="funct">
+        <ul>
+          <li><a href="newclass.html">新建课堂</a></li>
+          <li onclick="javascript:location.href='studentmanage.html'">学生管理</li>
+        </ul>
+
+        <div class="dele">
+          <div class="butt" onclick="dele()"><span>删除课程</span></div>
+        </div>
+      </div>
+      <div class="class hiden" id="class">
+        <div class="classlist" onclick="javascript:location.href='allcourse.html'">
+        <span class="dat">7月3号</span>
+        <span class="datname">软件工程</span>
+      </div>
+      <div class="classlist" onclick="javascript:location.href='allcourse.html'">
+        <span class="dat">7月3号</span>
+        <span class="datname">软件工程</span>
+      </div>
+      </div>
+    </div>
+  </div>
+  <div class="mask hiden" id="mask" onclick="cancell()"></div>
+      <div class="pash hiden" id="pash">
+        <div class="text"><span>确定删除该课程吗?</span></div>
+        <div class="but">
+          <div class="right" ><span>删除</span></div>
+          <div class="left" onclick="cancell()"><span>取消</span></div>
+        </div>
+      </div>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="../public/bootstrap/js/jquery.min.js"></script>
+<script src="../public/bootstrap/js/bootstrap.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script type="text/javascript">
+  //删除提示
+  function dele(){
+    $("#mask").show();
+    $("#pash").show();
+  }
+  //隐藏删除提示
+  function cancell(){
+    $("#mask").hide();
+    $("#pash").hide();
+  }
+  function sign(){
+    $("#class").hide();
+    $("#funct").show();
+    $("#signdo").addClass("click");
+    $("#dosign").removeClass("click");
+  }
+  function dopack(){
+    $("#funct").hide();
+    $("#class").show();
+    $("#dosign").addClass("click");
+    $("#signdo").removeClass("click");
+  }
+  function chang(){
+    $("#cname").hide();
+    $("#chang").hide()
+    $("#iname").css("display","inline-block");
+    $("#savechang").css("display","inline-block");
+  }
+  function savechang(){
+    $("#iname").hide();
+    $("#savechang").hide()
+    $("#cname").css("display","inline-block");
+    $("#chang").css("display","inline-block");
+  }
+</script>
+</body>
+</html>

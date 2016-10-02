@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+  <title>微课堂</title>
+
+  <!-- Bootstrap -->
+  <link href="../public/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="../public/css/student/questionresult.css">
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+    <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="container-fluid questionresult" >
+    <div class="row head">
+      <div class="leftimg">
+        <span><a href="student.html"><返回</a></span>
+      </div>
+      <div class="main">
+        <span class="clicked" id="topleft" onclick="topleft()">成绩</span>
+        <span  onclick="topright()" id="topright">排行榜</span>
+      </div>
+    </div><!-- end 头部导航 -->
+    <div class="row main">
+      <div class="score" id="score">
+        <div class="packname">
+          <span>试卷名称：JAVA测试卷一</span>
+        </div>
+        <div class="time">
+          <span>答题时间：1:10</span>
+        </div>
+        <div class="accurary">
+          <div class="text"><span>正确率</span></div>
+          <div class="rightnum"><span class="light">9</span><span>/10</span></div>
+        </div>
+        <ul>
+          <li><div class="item trues" onclick="javascript:location.href='questiondetail.html'">1</div></li>
+          <li><div class="item trues" onclick="javascript:location.href='questiondetail.html'">2</div></li>
+          <li><div class="item falses" onclick="javascript:location.href='questiondetail.html'">3</div></li>
+          <li><div class="item trues" onclick="javascript:location.href='questiondetail.html'">4</div></li>
+          <li><div class="item trues" onclick="javascript:location.href='questiondetail.html'">5</div></li>
+          <li><div class="item trues" onclick="javascript:location.href='questiondetail.html'">6</div></li>
+          <li><div class="item falses" onclick="javascript:location.href='questiondetail.html'">7</div></li>
+          <li><div class="item trues" onclick="javascript:location.href='questiondetail.html'">8</div></li>
+          <li><div class="item trues" onclick="javascript:location.href='questiondetail.html'">9</div></li>
+          <li><div class="item trues" onclick="javascript:location.href='questiondetail.html'">10</div></li>
+        </ul>
+      </div>
+      <div class="charts hiden" id="charts">
+        <div class="top">
+          <div class="flex-item">
+            <div class="image1">
+              <div class="crown"><img src="../public/img/25.png" width="50" height="30"></div>
+              <img src="../public/img/1.jpg" width="60" height="60">
+            </div>
+            <span>唐兵</span><br/>
+            <span class="big">8</span><span>/10</span><br/>
+            <span class="small">4:30</span>
+          </div>
+          <div class="flex-item">
+            <div class="image2">
+              <div class="crown"><img src="../public/img/24.png" width="60" height="30"></div>
+              <img src="../public/img/1.jpg" width="80" height="80">
+            </div>
+            <span>唐兵</span><br/>
+            <span class="big">8</span><span>/10</span><br/>
+            <span class="small">4:30</span>
+          </div>
+          <div class="flex-item">
+            <div class="image3">
+              <div class="crown"><img src="../public/img/26.png" width="50" height="30"></div>
+              <img src="../public/img/1.jpg" width="60" height="60">
+            </div>
+            <span>唐兵</span><br/>
+            <span class="big">8</span><span>/10</span><br/>
+            <span class="small">4:30</span>
+          </div>
+        </div>
+        <div class="list">
+          <div class="student">
+            <div class="num"><span class="big">9</span><span>/10</span></div>
+            <ul>
+              <li><div class="no"><span>4</span></li>
+              <li><div class="image"><img src="../public/img/1.jpg" width="34" height="34"></div></li>
+              <li><div class="name">
+                    <span>唐兵并</span><br/>
+                    <span>10:23</span>
+                  </div></li>
+            </ul>
+          </div>
+          <div class="student">
+            <div class="num"><span class="big">9</span><span>/10</span></div>
+            <ul>
+              <li><div class="no"><span>5</span></li>
+              <li><div class="image"><img src="../public/img/1.jpg" width="34" height="34"></div></li>
+              <li><div class="name">
+                    <span>唐兵并</span><br/>
+                    <span>10:23</span>
+                  </div></li>
+            </ul>
+          </div>
+          <div class="student">
+            <div class="num"><span class="big">9</span><span>/10</span></div>
+            <ul>
+              <li><div class="no"><span>6</span></li>
+              <li><div class="image"><img src="../public/img/1.jpg" width="34" height="34"></div></li>
+              <li><div class="name">
+                    <span>唐兵并</span><br/>
+                    <span>10:23</span>
+                  </div></li>
+            </ul>
+          </div>
+          <div class="student">
+            <div class="num"><span class="big">9</span><span>/10</span></div>
+            <ul>
+              <li><div class="no"><span>7</span></li>
+              <li><div class="image"><img src="../public/img/1.jpg" width="34" height="34"></div></li>
+              <li><div class="name">
+                    <span>唐兵并</span><br/>
+                    <span>10:23</span>
+                  </div></li>
+            </ul>
+          </div>
+          <div class="student">
+            <div class="num"><span class="big">9</span><span>/10</span></div>
+            <ul>
+              <li><div class="no"><span>8</span></li>
+              <li><div class="image"><img src="../public/img/1.jpg" width="34" height="34"></div></li>
+              <li><div class="name">
+                    <span>唐兵并</span><br/>
+                    <span>10:23</span>
+                  </div></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="../public/bootstrap/js/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script type="text/javascript">
+
+  //完成情况
+  function topleft(){
+    $("#topright").removeClass("clicked");
+    $("#topleft").addClass("clicked");
+    $("#charts").hide();
+    $("#score").show();
+  }
+  //答题结果
+  function topright(){
+    $("#topleft").removeClass("clicked");
+    $("#topright").addClass("clicked");
+    $("#score").hide();
+    $("#charts").show();
+  }
+ 
+</script>
+</body>
+</html>

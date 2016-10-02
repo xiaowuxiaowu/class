@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+  <title>微课堂</title>
+
+  <!-- Bootstrap -->
+  <link href="../public/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="../public/css/pushresult.css">
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+    <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="container-fluid signclass" >
+    <div class="row head">
+      <div class="leftimg">
+        <span><a href="pushexam.html"><返回</a></span>
+      </div>
+       <div class="rightimg" >
+         <span class="hiden" onclick="showquenum();" id="adds"><img src="../public/img/22.png" width="18" height="18"></span>
+      </div>
+      <div class="main">
+        <span class="clicked" id="topleft" onclick="topleft()">完成情况</span>
+        <span  onclick="topright()" id="topright">答题结果</span>
+      </div>
+    </div><!-- end 头部导航 -->
+    
+    <div class="row" id="signclass">
+      <div class="body">
+        <div class="signbody">
+          <div class="wrap" id="wrapall">
+            <div class="all" onclick="showsign(1);">
+              <div class="alltop">
+                <div class="signico">
+                  <span class="glyphicon glyphicon-triangle-bottom" id="leftico1"></span>
+                </div>
+                <div class="signname">
+                  <span>未完成</span>
+                </div>
+                <div class="signnum">
+                  <span><span class="rcolor">13</span>/100人</span>
+                </div>
+              </div>
+              <div class="detail" id="detail1">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>班级</th>
+                      <th>姓名</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>14级互联网1班</td>
+                      <td>唐兵</td>
+                    </tr>
+                    <tr>
+                      <td>14级互联网1班</td>
+                      <td>唐兵</td>
+                    </tr>
+                    <tr>
+                      <td>14级互联网1班</td>
+                      <td>唐兵</td>
+                    </tr>
+                    <tr>
+                      <td>14级互联网1班</td>
+                      <td>唐兵</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="all" onclick="showsign(2);">
+              <div class="alltop">
+                <div class="signico">
+                  <span class="glyphicon glyphicon-triangle-right" id="leftico2"></span>
+                </div>
+                <div class="signname">
+                  <span>已完成</span>
+                </div>
+                <div class="signnum">
+                  <span><span class="bcolor">14</span>/100人</span>
+                </div>
+              </div>
+              <div class="detail hiden" id="detail2">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>学号</th>
+                      <th>姓名</th>
+                      <th>正确情况</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>1405030402</td>
+                      <td>唐兵</td>
+                      <td><span class="chong">8</span>/<span>10</span></td>
+                    </tr>
+                    <tr>
+                      <td>1405030402</td>
+                      <td>唐兵</td>
+                      <td><span class="chong">8</span>/<span>10</span></td>
+                    </tr>
+                    <tr>
+                      <td>1405030402</td>
+                      <td>唐兵</td>
+                      <td><span class="chong">8</span>/<span>10</span></td>
+                    </tr>
+                    <tr>
+                      <td>1405030402</td>
+                      <td>唐兵</td>
+                      <td><span class="chong">8</span>/<span>10</span></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid pushresult hiden" id="pushresult">
+    <div class="row">
+
+      <!-- begin 统计情况 -->
+      <div class="detail">
+        <div class="paname">
+          <span>java测试卷一</span>
+          <span class="num">1/10</span>
+        </div>
+        <div class="main">
+          <div class="tag"><span>单选</span></div>
+          <div class="cont"><span>科技时代反击看来就是啊商标局商标发卢卡斯风格来看萨芬</span></div>
+          <div class="aa">正确率：<span class="chong">88</span>/100</div>
+          <div class="option">
+            <span class="gren">A.快乐傻大个呢就</span>
+            <div class="line">
+              <div class="num">20%</div>
+              <div class="inline" id="inline1"></div>
+            </div><br/>
+            <span>B.快乐傻大个呢就</span>
+            <div class="line">
+              <div class="num">30%</div>
+              <div class="inline" id="inline2"></div>
+            </div><br/>
+            <span>C.快乐傻大个呢就</span>
+            <div class="line">
+              <div class="num">40%</div>
+              <div class="inline" id="inline3"></div>
+            </div><br/>
+            <span>D.快乐傻大个呢就</span>
+            <div class="line">
+              <div class="num">10%</div>
+              <div class="inline" id="inline4"></div>
+            </div><br/>
+          </div>
+        </div>
+        <div class="left"><span>上一题</span></div>
+        <div class="next hiden"><span>下一题</span></div>
+        <div class="next"><span>返回首页</span></div>
+      </div>
+      </div><!-- end 统计情况 -->
+    </div>
+  </div>
+  <div class="cloth hiden" id="cloth" onclick="showquenum()"></div>
+  <div class="quenum hiden" id="quenum" >
+    <div class="list">
+      <div class="num">1</div>
+      <div class="num">2</div>
+      <div class="num">3</div>
+      <div class="num">4</div>
+      <div class="num">5</div>
+      <div class="num">6</div>
+      <div class="num">7</div>
+      <div class="num">8</div>
+      <div class="num">9</div>
+      <div class="num">10</div>
+    </div>
+  </div>
+  
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="../public/bootstrap/js/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script type="text/javascript">
+
+  function showquenum(){
+    $("#quenum").slideToggle("slow");
+    $("#cloth").toggle();
+  }
+  
+//完成情况
+  function topleft(){
+    $("#adds").hide();
+    $("#pushresult").hide();
+    $("#signclass").show();
+    $("#topright").removeClass("clicked");
+    $("#topleft").addClass("clicked");
+    $("#quenum").hide();
+    $("#cloth").hide();
+    $("#inline1").css("width","0px");
+    $("#inline2").css("width","0px");
+    $("#inline3").css("width","0px");
+    $("#inline4").css("width","0px");
+  }
+  //答题结果
+  function topright(){
+    $("#adds").show();
+    $("#signclass").hide();
+    $("#pushresult").show();
+    $("#topleft").removeClass("clicked");
+    $("#topright").addClass("clicked");
+    
+    $("#inline1").animate({"width":"20%"});
+    $("#inline2").animate({"width":"30%"});
+    $("#inline3").animate({"width":"40%"});
+    $("#inline4").animate({"width":"10%"});
+  }
+ 
+  //全部签到显示下拉
+  function showsign(num){
+    $("#detail"+num).toggle();
+    var dis=$("#detail"+num).css("display");
+    if("block"==dis){
+      $("#leftico"+num).removeClass("glyphicon-triangle-right");
+      $("#leftico"+num).addClass("glyphicon-triangle-bottom");
+    }else{
+      $("#leftico"+num).removeClass("glyphicon-triangle-bottom");
+      $("#leftico"+num).addClass("glyphicon-triangle-right");
+    }
+  }
+  
+</script>
+</body>
+</html>

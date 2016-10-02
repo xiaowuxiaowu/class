@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+  <title>微课堂</title>
+
+  <!-- Bootstrap -->
+  <link href="../public/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="../public/css/student/doquestion.css">
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+    <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+  
+</head>
+<body>
+  <!-- begin 外部容器 -->
+  <div class="container-fluid doquestion">
+    <div class="row">
+      <div class="head">
+        <div class="back"><a href="student.html"><返回</a></div> 
+        <div class="right">
+          <span id="clock"></span>
+          <img src="../public/img/22.png" width="22" height="22" onclick="showquenum();">
+        </div>
+      </div>
+      <div class="body" id="body">
+        <div class="name">
+          <span>JAVA测试卷1</span>
+          <div class="right" id="no"><span><span class="flag">1</span>/10</span></div>
+        </div>
+        <div class="question" id="question1">
+          <div class="content">
+            <div class="tag"><span>单选</span></div>
+            <div class="text">
+              <span>空间吧萨芬考虑啥的疯狂来说的话单身公害斯蒂芬韩国撒的人看士ok收到回复ok就的发给你上班多久开始佛大夫</span>
+            </div>
+          </div>
+          <div class="select">
+            <div class="line" id="1A" onclick="answer(1+'.A');">
+              <div class="span1">
+                <span>A</span>
+              </div>
+              <div class="right">
+                <span>深刻的目标是顺利开机都而的身份有关啊是dryaster啊让他撒额他时代赋予不会撒开了和是</span>
+              </div>
+            </div>
+            <div class="line" id="1B" onclick="answer(1+'.B');">
+              <div class="span1">
+                <span >B</span>
+              </div>
+              <div class="right">
+                <span>可垃圾啊是的监控设备的看来就了深刻的目标是是的呀都是有谁惹她也使用顺利开机都不会撒开了和是</span>
+              </div>
+            </div>
+            <div class="line" id="1C"  onclick="answer(1+'.C');">
+              <div class="span1">
+                <span >C</span>
+              </div>
+              <div class="right">
+                <span>可垃圾啊是的监控设备的看来就了深刻的是对方同意是对人体有使用目标是顺利开机都不会撒开了和是</span>
+              </div>
+            </div>
+            <div class="line" id="1D" onclick="answer(1+'.D');">
+              <div class="span1">
+                <span >D</span>
+              </div>
+              <div class="right">
+                <span>可垃圾啊是的监控设备的看来就了深刻的目是对方同意上的太阳上的太阳使用上的太阳标是顺利开机都不会撒开了和是</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  <div class="bottom">
+    <div class="left">
+      <button class="hiden" onclick="lastquestion()" id="lastquestion">上一题</button>
+    </div>
+    <div class="right">
+      <button onclick="nextquestion()" id="nextquestion">下一题</button>
+      <button class="hiden" onclick="javascript:location.href='questionresult.html'" id="handpackage" >提交试卷</button>
+    </div>
+  </div>
+  <div class="wrap hiden" id="wrap" onclick="showquenum();"></div>
+  <div class="quenum hiden" id="quenum">
+    <div class="list" >
+      <ul id="listnum">
+       <!--  <li><div class="num" onclick="jude(1)">1</div></li>
+        <li><div class="num" onclick="jude(2)">2</div></li>
+        <li><div class="num" onclick="jude(3)">3</div></li>
+        <li><div class="num" onclick="jude(1)">1</div></li>
+        <li><div class="num" onclick="jude(1)">1</div></li>
+        <li><div class="num" onclick="jude(1)">1</div></li>
+        <li><div class="num" onclick="jude(1)">1</div></li>
+        <li><div class="num" onclick="jude(1)">1</div></li> -->
+      </ul>
+    </div>
+  </div>
+  <div class="end hiden" id="end">
+    <div class="endback"></div>
+    <div class="window">
+      <div class="text">时间到！请提交</div>
+      <div class="sure">确定</div>
+    </div>
+  </div>
+  
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="../public/bootstrap/js/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script type="text/javascript">
+var arr=[];//选择的答案
+var questionno=1;//当前题目的序号
+var question= new Array();//获取的试卷题目
+    question[0]=[];
+    question[0]['content']="啊士大夫昆仑山老是看到你脸上烧录卡的jfk拉设定拉开减肥呢啦开始奋斗萨的父母";
+    question[0]["A"]="解开了士大夫时间克拉的了凯撒的飞机";
+    question[0]['B']="了空间适当放宽了开机时间地方立刻撒旦发考虑接受对方";
+    question[0]['C']="哦了喀什地方了看见撒旦发了看见撒旦发了喀什地方考虑接受对方";
+    question[0]['D']="看见了士大夫流口水的流口水的ok撒地方；了就开始大幅";
+    
+    question[1]=[];
+    question[1]['content']="科技时代发款滤镜口径士大夫看链接即可萨芬偶姐姐撒地方拒绝卡上的哦";
+    question[1]['A']="一回事大家看法姐姐撒地方圣诞节使得看见你看陌生的了即将开始的";
+    question[1]['B']="就哈是否开机马上发看见撒旦反抗就卡上的看法破阿斯蒂芬你看见撒旦发科技时代";
+    question[1]['C']="好吧你不撒地方每年上涨地方ok就是打工科技时代反击看监考六级考试的";
+    question[1]['D']="看撒地方就能开机卡死的金克拉撒旦发课件撒没地方空间那时的F";
+    
+    question[2]=[];
+    question[2]['content']="科技时代发款滤镜口径士大夫看链接即可萨芬偶姐姐撒地方拒绝卡上的哦";
+    question[2]['A']="一回事大家看法姐姐撒地方圣诞节使得看见你看陌生的了即将开始的";
+    question[2]['B']="就哈是否开机马上发看见撒旦反抗就卡上的看法破阿斯蒂芬你看见撒旦发科技时代";
+    question[2]['C']="好吧你不撒地方每年上涨地方ok就是打工科技时代反击看监考六级考试的";
+    question[2]['D']="看撒地方就能开机卡死的金克拉撒旦发课件撒没地方空间那时的F";2
+  var index=document.getElementById("end");
+  index.addEventListener("touchmove",function(e){
+    e.preventDefault();
+  });
+  //初始化
+  $(function(){
+    time(10);
+    $("#no").html("<span><span class='flag'>1</span>/"+question.length+"</span>");
+    var width=document.documentElement.clientWidth;
+    for(var i=0;i<question.length;i++){
+      $("#listnum").append("<li><div class='num' onclick='jude("+(i+1)+")'>"+(i+1)+"</div></li>");
+    }
+  });
+
+  //时钟
+  function time(minute){
+    var m = minute;//传个分钟数到这里
+    var s = 60;
+    function showtime(){
+      if(m<10 && s<10){
+        $("#clock").text("0"+m+":0"+s);
+      }else if(m<10){
+         $("#clock").text("0"+m+":"+s);
+      }else if(s<10){
+        $("#clock").text(m+":0"+s);
+      }else{
+        $("#clock").text(m+":"+s);
+      }
+      s = s-1;
+      if(m==0 && s==0){
+        $("#clock").text("0"+m+":0"+s);
+       clearInterval(settime); 
+       $("#end").show();
+      }
+      if(s==0){
+        m = m -1;
+        s = 60;
+      }
+    }
+    clearInterval(settime); 
+    var settime = setInterval(function(){
+      showtime();
+    },1000);
+  }
+
+  //选择题目序号，跳到该题目
+  function jude(num){
+    showquenum();
+    var html="<div class='question' id='question"+num+"' >\
+                <div class='content' >\
+                  <div class='tag'><span>单选</span></div>\
+                  <div class='text'>\
+                    <span>"+question[num-1]['content']+"</span>\
+                  </div>\
+                </div>\
+                <div class='select'>\
+                  <div class='line' id='"+num+"A' onclick='answer(&quot;"+num+".A&quot;);'>\
+                    <div class='span1'>\
+                      <span>A</span>\
+                    </div>\
+                    <div class='right'>\
+                      <span>"+question[num-1]['A']+"</span>\
+                    </div>\
+                  </div>\
+                  <div class='line' id='"+num+"B' onclick='answer(&quot;"+num+".B&quot;);'>\
+                    <div class='span1'>\
+                      <span >B</span>\
+                    </div>\
+                    <div class='right'>\
+                      <span>"+question[num-1]['B']+"</span>\
+                    </div>\
+                  </div>\
+                  <div class='line' id='"+num+"C'  onclick='answer(&quot;"+num+".C&quot;);'>\
+                    <div class='span1'>\
+                      <span >C</span>\
+                    </div>\
+                    <div class='right'>\
+                      <span>"+question[num-1]['C']+"</span>\
+                    </div>\
+                  </div>\
+                  <div class='line' id='"+num+"D' onclick='answer(&quot;"+num+".D&quot;);'>\
+                    <div class='span1'>\
+                      <span >D</span>\
+                    </div>\
+                    <div class='right'>\
+                      <span>"+question[num-1]['D']+"</span>\
+                    </div>\
+                  </div>\
+                </div>\
+              </div>";
+      $("#question"+questionno).animate({left:"-100%"},300,function(){
+      $("#question"+questionno).remove();
+      $("#body").append(html);
+      questionno=num;
+      $("#no").html("<span><span class='flag'>"+questionno+"</span>/"+question.length+"</span>");
+      if(!("undefined"==typeof(arr[questionno]))){
+        for(var i=0;i<arr[questionno].length;i++){
+          $("#"+questionno+arr[questionno][i]).addClass("click");
+        }
+      }
+      butt(questionno);
+    });
+  }
+  
+  //下一题
+  function nextquestion(){
+    var html="<div class='question' id='question"+(questionno+1)+"' >\
+                <div class='content' >\
+                  <div class='tag'><span>单选</span></div>\
+                  <div class='text'>\
+                    <span>"+question[questionno]['content']+"</span>\
+                  </div>\
+                </div>\
+                <div class='select'>\
+                  <div class='line' id='"+(questionno+1)+"A' onclick='answer(&quot;"+(questionno+1)+".A&quot;);'>\
+                    <div class='span1'>\
+                      <span>A</span>\
+                    </div>\
+                    <div class='right'>\
+                      <span>"+question[questionno]['A']+"</span>\
+                    </div>\
+                  </div>\
+                  <div class='line' id='"+(questionno+1)+"B' onclick='answer(&quot;"+(questionno+1)+".B&quot;);'>\
+                    <div class='span1'>\
+                      <span >B</span>\
+                    </div>\
+                    <div class='right'>\
+                      <span>"+question[questionno]['B']+"</span>\
+                    </div>\
+                  </div>\
+                  <div class='line' id='"+(questionno+1)+"C'  onclick='answer(&quot;"+(questionno+1)+".C&quot;);'>\
+                    <div class='span1'>\
+                      <span >C</span>\
+                    </div>\
+                    <div class='right'>\
+                      <span>"+question[questionno]['C']+"</span>\
+                    </div>\
+                  </div>\
+                  <div class='line' id='"+(questionno+1)+"D' onclick='answer(&quot;"+(questionno+1)+".D&quot;);'>\
+                    <div class='span1'>\
+                      <span >D</span>\
+                    </div>\
+                    <div class='right'>\
+                      <span>"+question[questionno]['D']+"</span>\
+                    </div>\
+                  </div>\
+                </div>\
+              </div>";
+    $("#question"+questionno).animate({left:"-100%"},300,function(){
+      $("#question"+questionno).remove();
+      $("#body").append(html);
+      questionno++;
+      $("#no").html("<span><span class='flag'>"+questionno+"</span>/"+question.length+"</span>");
+      if(!("undefined"==typeof(arr[questionno]))){
+        for(var i=0;i<arr[questionno].length;i++){
+          $("#"+questionno+arr[questionno][i]).addClass("click");
+        }
+      }
+      butt(questionno);
+    });
+  }
+
+  //上一题
+  function lastquestion(){
+    var html="<div class='question' id='question"+(questionno-1)+"' >\
+                <div class='content' >\
+                  <div class='tag'><span>单选</span></div>\
+                  <div class='text'>\
+                    <span>"+question[questionno-1]['content']+"</span>\
+                  </div>\
+                </div>\
+                <div class='select'>\
+                  <div class='line' id='"+(questionno-1)+"A' onclick='answer(&quot;"+(questionno-1)+".A&quot;);'>\
+                    <div class='span1'>\
+                      <span>A</span>\
+                    </div>\
+                    <div class='right'>\
+                      <span>"+question[questionno-1]['A']+"</span>\
+                    </div>\
+                  </div>\
+                  <div class='line' id='"+(questionno-1)+"B' onclick='answer(&quot;"+(questionno-1)+".B&quot;);'>\
+                    <div class='span1'>\
+                      <span >B</span>\
+                    </div>\
+                    <div class='right'>\
+                      <span>"+question[questionno-1]['B']+"</span>\
+                    </div>\
+                  </div>\
+                  <div class='line' id='"+(questionno-1)+"C'  onclick='answer(&quot;"+(questionno-1)+".C&quot;);'>\
+                    <div class='span1'>\
+                      <span >C</span>\
+                    </div>\
+                    <div class='right'>\
+                      <span>"+question[questionno-1]['C']+"</span>\
+                    </div>\
+                  </div>\
+                  <div class='line' id='"+(questionno-1)+"D' onclick='answer(&quot;"+(questionno-1)+".D&quot;);'>\
+                    <div class='span1'>\
+                      <span >D</span>\
+                    </div>\
+                    <div class='right'>\
+                      <span>"+question[questionno-1]['D']+"</span>\
+                    </div>\
+                  </div>\
+                </div>\
+              </div>";
+    $("#question"+questionno).animate({left:"100%"},300,function(){
+      $("#question"+questionno).remove();
+      $("#body").append(html);
+      questionno--;
+      $("#no").html("<span><span class='flag'>"+questionno+"</span>/"+question.length+"</span>");
+      if(!("undefined"==typeof(arr[questionno]))){
+        for(var i=0;i<arr[questionno].length;i++){
+          $("#"+questionno+arr[questionno][i]).addClass("click");
+        }
+      }
+      butt(questionno);
+    });
+  }
+
+  //按钮的显示隐藏
+  function butt(questionno){
+    //如果是第一题
+    if(questionno==1){
+      $("#lastquestion").hide();
+    }else{
+      $("#lastquestion").show();
+    }
+    if(questionno==question.length){
+      $("#nextquestion").hide();
+      $("#handpackage").show();
+    }else{
+      $("#handpackage").hide();
+      $("#nextquestion").show();
+    }
+  }
+
+  //显示或隐藏选择题号
+  function showquenum(){
+    $("#quenum").slideToggle("slow");
+    $("#wrap").toggle();
+  }
+
+  //点击选项，将该选项保存到数组
+  function answer(id){
+    var selectid=id;
+    var divi=id.split(".");
+    divi[0]=parseInt(divi[0]);
+    selectid=selectid.replace(".","");
+
+    //如果已选过，则删除该选项答案及样式 
+    if($("#"+selectid).hasClass("click")){
+      $("#"+selectid).removeClass("click");
+      arr[divi[0]]=arr[divi[0]].replace(divi[1],"");
+
+    //如果未选过，则添加该答案及样式
+    }else{
+      $("#"+selectid).addClass("click");
+      if("undefined"==typeof(arr[divi[0]])){
+        arr[divi[0]]=divi[1];
+      }else{
+        arr[divi[0]]=arr[divi[0]]+divi[1];
+      }
+    }
+    console.log(arr);
+  }
+</script>
+</body>
+</html>

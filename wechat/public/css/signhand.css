@@ -1,0 +1,183 @@
+body{
+	background-color: #F2F2F2;
+}
+.addcourse{
+	font-size: 16px;
+}
+.addcourse .row .head{
+	height: 50px;
+	background-color: #FFFFFF;
+	box-shadow:0px 1px 1px #999999;
+}
+.addcourse .row .head .back{
+	position:absolute;
+	height: 50px;
+	top: 0px;
+	left: 10px; 
+	line-height: 50px;
+	vertical-align: middle;
+	float: left;
+}
+
+.addcourse .row .head .title{
+	line-height: 50px;
+	text-align:center;
+	
+	vertical-align:middle;
+}
+.addcourse .row .body{
+	margin:10px;
+}
+.addcourse .row .body .num .form-group .left{
+	float: left;
+	height: 34px;
+	line-height:34px;
+	vertical-align: middle;
+}
+.addcourse .row .body .num .form-group .right{
+	margin-left: 50px; 
+}
+.addcourse .row .body .bottom{
+	margin-top:60px;
+}
+.addcourse .row .body .bottom button{
+	border:none;
+	width: 100%;
+	height: 35px;
+	color: #FFFFFF;
+	background-color: #009CF3;
+	line-height: 30px;
+	vertical-align: middle;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+.addcourse .row .body .bottom button:hover{
+	background-color: #1E6FFC;
+}
+.addcourse .row .body .infomation .coursename .left{
+	float: left;
+	height: 34px;
+	line-height:34px;
+	vertical-align: middle;
+}
+.addcourse .row .body .infomation .coursename .right{
+	margin-left:50px; 
+	line-height: 34px;
+	vertical-align: middle;
+}
+.addcourse .row .body .infomation .teachername .left{
+	float: left;
+	height: 40px;
+	line-height:40px;
+	vertical-align: middle;
+}
+.addcourse .row .body .infomation .teachername .right{
+	margin-left:50px; 
+	line-height: 40px;
+	vertical-align: middle;
+}
+.mask{
+	position: fixed;
+	left:0;
+	right:0;
+	top: 0;
+	bottom:0;
+	z-index: 10;
+	background-color: #000000;
+	opacity: 0.2;
+}
+.pash{
+	
+	height:95px;
+	width:266px;
+	position:fixed;
+	margin:0px auto;
+	left:0;
+	top:0;
+	right:0;
+	bottom:0;
+	background-color: #FFFFFF;
+	margin: auto;
+	z-index: 20;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+
+	animation: done;
+	animation-duration: 0.5s;
+	animation-timing-function:ease-out;
+	animation-fill-mode: forwards;
+
+	-webkit-animation: done;
+	-webkit-animation-duration: 0.5s;
+	-webkit-animation-timing-function:ease-out;
+	-webkit-animation-fill-mode: forwards;
+
+	/*animation: endd;
+	animation-duration: 0.2s;
+	animation-timing-function:ease-out;
+	animation-fill-mode: forwards;
+	animation-delay: 1s;
+
+	-webkit-animation: endd;
+	-webkit-animation-duration: 0.2s;
+	-webkit-animation-timing-function:ease-out;
+	-webkit-animation-fill-mode: forwards;
+	-webkit-animation-delay: 1s;*/
+}
+@keyframes done{
+	0%{transform: scale(0);opacity:0;}
+	80%{transform: scale(1.2); opacity:1;}
+	100%{transform: scale(1.0);opacity:1;}
+}
+@-webkit-keyframes done{
+	0%{-webkit-transform: scale(0);opacity:0;}
+	80%{-webkit-transform: scale(1.2);opacity:1;}
+	100%{-webkit-transform: scale(1.0);opacity:1;}
+}
+
+.pash .text{
+	text-align: center;
+	height:95px;
+	line-height:95px;
+	vertical-align:middle;
+	font-size:20px;
+}
+.pash .but{
+	margin-top:10px;
+}
+.pash .but .right{
+	float:right;
+	height:35px;
+	width:80px;
+	text-align:center;
+	line-height:35px;
+	vertical-align:middle;
+	background-color:#009CF3;
+	border-radius:5px;
+	color:#FFFFFF;
+}
+.pash .but .left{
+	height:35px;
+	width:80px;
+	text-align:center;
+	line-height:35px;
+	vertical-align:middle;
+	border:1px solid #D7D7D7;
+	border-radius:5px;
+	background-color:#FF4A4A;
+	color:#FFFFFF;
+}
+
+
+a{
+	color: #333333;
+}
+a:hover{
+	color: #009CF3;
+}
+a:link{
+	text-decoration: none;
+}
+.hiden{
+	display: none;
+}

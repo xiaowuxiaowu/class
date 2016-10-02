@@ -1,0 +1,42 @@
+body{
+  background-color: #F2F2F2;
+}
+.signsucced{
+  margin:10px;
+}
+.signsucced .row .succedimg {
+  margin:20px auto;
+  width: 126px;
+  height:126px;
+}
+.signsucced .row .succedtext{
+   margin:20px auto;
+    font-size: 18px;
+    text-align:center;
+} 
+.signsucced .row .detail1{
+  height: 35px;
+  line-height: 35px;
+  vertical-align: middle;
+  text-align: center;
+  color: #FFFFFF;
+  background-color: #009CF3;
+  border-radius:5px;
+  -webkit-border-radius:5px;
+}
+.signsucced .row .detail1:hover{
+  background-color:#1E6FFC;
+}
+.signsucced .row .back{
+  margin-top: 30px;
+  height: 35px;
+  line-height: 35px;
+  vertical-align: middle;
+  text-align: center;
+  border:1px solid #D7D7D7;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+}
+.signsucced .row .back:hover{
+  background-color:#D7D7D7;
+}

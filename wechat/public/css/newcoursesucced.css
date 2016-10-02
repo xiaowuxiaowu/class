@@ -1,0 +1,42 @@
+body{
+	background-color: #F2F2F2;
+}
+.newcoursesucced .row .image{
+	margin: 30px auto;
+	width: 100px;
+}
+
+.newcoursesucced .row .classinfo{
+	margin:20px auto;
+	width: 170px;
+}
+.newcoursesucced .row .classinfo ul{
+	padding:0;
+}
+.newcoursesucced .row .classinfo ul li{
+	list-style: none;
+	height:30px;
+	text-align: center;
+	line-height: 30px;
+	vertical-align: middle;
+	font-size:19px;
+}
+.newcoursesucced .row .bbt .sharetext{
+	margin-top:40px;
+	opacity:0.5;
+	text-align:center;
+}
+.newcoursesucced .row .bbt .back{
+	margin:10px 10px;
+	height:35px;
+	line-height:35px;
+	vertical-align:middle;
+	text-align:center;
+	border-radius:5px;
+	border:1px solid #D7D7D7;
+	-webkit-border-radius:5px;
+	background-color:#FFFFFF;
+}
+.newcoursesucced .row .bbt .back:hover{
+	background-color:#D7D7D7;
+}

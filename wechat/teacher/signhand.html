@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+  <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+  <title>微课堂</title>
+
+  <!-- Bootstrap -->
+  <link href="../public/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="../public/css/signhand.css">
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+    <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="container-fluid addcourse">
+    <div class="row">
+      <div class="head">
+        <div class="back"><a href="teacher.html"><返回</a></div> 
+        <div class="title">
+          <span>手动签到</span>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="body">
+        <div class="num">
+          <div class="form-group">
+           <div class="left"><span>学号</span></div>
+            <div class="right">
+              <input type="text" id="name" autofocus="autofocus" class="form-control" placeholder="请输入学号">
+            </div>
+          </div>
+        </div>
+       
+        <div class="infomation hiden" id="infomation">
+          
+          <div class="teachername">
+            <div class="left">
+              <span>姓名</span>
+            </div>
+            <div class="right">
+              <span>唐兵</span>
+            </div>
+          </div>
+        </div>
+        <div class="bottom" onclick="dele();">
+          <button >签到</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="mask hiden" id="mask" onclick="canout()"></div>
+  <div class="pash hiden" id="pash">
+    <div class="text"><span>签到成功!</span></div>
+   <!--  <div class="but">
+      <div class="right" onclick="continuesign()"><span>继续签到</span></div>
+      <div class="left" onclick="cancell()"><span>返回首页</span></div>
+    </div> -->
+  </div>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="../public/bootstrap/js/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script type="text/javascript">
+  $(function(){  
+    $('#name').bind('input propertychange', function() {    
+        $("#infomation").show();
+    });  
+  });  
+  //删除提示
+  function dele(){
+    $("#mask").show();
+    $("#pash").show();
+    setTimeout("canout()",1300);
+  }
+  //隐藏删除提示
+  function cancell(){
+    $("#mask").hide();
+    $("#pash").hide();
+    location.href='teacher.html';
+  }
+  function continuesign(){
+    $("#mask").hide();
+    $("#pash").hide();
+    $("#name").val("");
+    $("#infomation").hide();
+  }
+ function canout(){
+    $("#pash").hide();
+    $("#mask").fadeOut();
+  }
+</script>
+</body>
+</html>

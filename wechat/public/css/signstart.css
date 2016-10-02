@@ -1,0 +1,18 @@
+body{
+	background-color: #F2F2F2;
+}
+.signstart .row .image{
+	margin: 30px auto;
+	width: 202px;
+}
+.signstart .row .image .text{
+	text-align: center;
+}
+.signstart .row .image .text .suc{
+	font-size: 21px;
+}
+.signstart .row .image .text .turn{
+	line-height: 60px;
+	vertical-align: middle;
+	opacity: 0.5;
+}

@@ -1,0 +1,201 @@
+body{
+	background-color: #F2F2F2;
+}
+.signclass{
+	font-size: 16px;
+}
+.signclass .row .head{
+	height: 50px;
+	background-color: #FFFFFF;
+	box-shadow:0px 1px 1px #999999;
+}
+.signclass .row .head .back{
+	position:absolute;
+	height: 50px;
+	top: 0px;
+	left: 10px; 
+	line-height: 50px;
+	vertical-align: middle;
+	float: left;
+}
+.signclass .row .head .title{
+	line-height: 50px;
+	text-align:center;
+	vertical-align:middle;
+}
+.signclass .row .head .right{
+	position:absolute;
+	height: 50px;
+	top: 3px;
+	right: 10px; 
+	line-height: 50px;
+	vertical-align: middle;
+	float: left;
+}
+.signclass .row .head .rightdele{
+	position:absolute;
+	height: 50px;
+	right: 10px; 
+	top:0px;
+	line-height: 50px;
+	vertical-align: middle;
+	float: left;
+}
+.signclass .row .body .signbody .main{
+	margin: 20px 10px;
+}
+.signclass .row .body .signbody .main table{
+	margin-top: 10px;
+	width:100%;
+}
+.signclass .row .body .signbody .main table thead {
+	height:35px;
+	line-height: 35px;
+	background-color: #009CF3;
+}
+.signclass .row .body .signbody .main table thead tr th{
+	position:relative;
+	text-align: center;
+	
+	color:#FFFFFF;
+}
+
+.signclass .row .body .signbody .main table thead tr th input{
+	position:absolute;
+	left:4px;
+	top:5px;
+	width:19px;
+	height:19px;
+}
+.signclass .row .body .signbody .main table thead tr th .ths{
+	display: inline-block;
+	line-height: 35px;
+	vertical-align: top;
+	width: 10px;
+	height: 14px;
+}
+.signclass .row .body .signbody .main table thead tr th:first-child{
+	border-right:1px solid #FFFFFF;
+}
+.signclass .row .body .signbody .main table tbody{
+	background-color: #FFFFFF;
+	width: 100px;
+}
+.signclass .row .body .signbody .main table tbody tr td{
+	position:relative;
+	
+	height:40px;
+	line-height: 40px;
+	vertical-align: middle;
+	text-align: center;
+	
+}
+.signclass .row .body .signbody .main table tbody tr td:first-child{
+	height:40px;
+	line-height: 40px;
+	vertical-align: middle;
+	text-align: center;
+	border-left:1px solid #E4E4E4;
+	border-bottom:1px solid #E4E4E4;
+}
+.signclass .row .body .signbody .main table tbody tr td:last-child{
+	height:40px;
+	line-height: 40px;
+	vertical-align: middle;
+	text-align: center;
+	border-bottom:1px solid #E4E4E4;
+	border-right:1px solid #E4E4E4;
+}
+.signclass .row .body .signbody .main table tbody tr td .select{
+	position:absolute;
+	left:0px;
+	margin:4px;
+}
+.signclass .row .body .signbody .main table tbody tr td .select input{
+	width:18px;
+	height:18px;
+}
+.mask{
+	position: fixed;
+	left:0;
+	right:0;
+	top: 0;
+	bottom:0;
+	z-index: 10;
+	background-color: #000000;
+	opacity: 0.2;
+}
+.pash{
+	padding:15px 25px;
+	height:95px;
+	width:266px;
+	position:fixed;
+	margin:0px auto;
+	left:0;
+	top:0;
+	right:0;
+	bottom:0;
+	background-color: #FFFFFF;
+	margin: auto;
+	z-index: 20;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+
+	animation: done;
+	animation-duration: 0.5s;
+	animation-timing-function:ease-out;
+	animation-fill-mode: forwards;
+
+	-webkit-animation: done;
+	-webkit-animation-duration: 0.5s;
+	-webkit-animation-timing-function:ease-out;
+	-webkit-animation-fill-mode: forwards;
+}
+@keyframes done{
+	0%{transform: scale(0);opacity:0;}
+	80%{transform: scale(1.2); opacity:1;}
+	100%{transform: scale(1.0);opacity:1;}
+}
+@-webkit-keyframes done{
+	0%{-webkit-transform: scale(0);opacity:0;}
+	80%{-webkit-transform: scale(1.2);opacity:1;}
+	100%{-webkit-transform: scale(1.0);opacity:1;}
+}
+.pash .text{
+	text-align: center;
+}
+.pash .but{
+	margin-top:10px;
+}
+.pash .but .right{
+	float:right;
+	height:35px;
+	width:80px;
+	text-align:center;
+	line-height:35px;
+	vertical-align:middle;
+	background-color:#FF4A4A;
+	border-radius:5px;
+	color:#FFFFFF;
+}
+.pash .but .left{
+	height:35px;
+	width:80px;
+	text-align:center;
+	line-height:35px;
+	vertical-align:middle;
+	border:1px solid #D7D7D7;
+	border-radius:5px;
+}
+a{
+	color: #333333;
+}
+a:hover{
+	color: #009CF3;
+}
+a:link{
+	text-decoration: none;
+}
+.hiden{
+	display:none;
+}

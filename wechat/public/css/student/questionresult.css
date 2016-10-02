@@ -1,0 +1,227 @@
+body{
+	margin:0;
+	padding:0;
+	background-color: #F2F2F2;
+}
+.questionresult{
+	font-size: 16px;
+}
+.questionresult .head{
+	box-shadow:0px 2px 2px #CCCCCC;
+	-webkit-box-shadow:0px 2px 2px #CCCCCC;
+	background:#FFFFFF;
+	text-align: center;
+}
+.questionresult .head .leftimg{
+	padding-left: 10px;
+	padding-top: 13px;
+	padding-bottom: 15px;
+	width: 56px;
+	float: left;
+	vertical-align: bottom;
+}
+.questionresult .head .main{
+	margin-left: 58px;
+	margin-right:58px;
+	line-height:47px;
+	vertical-align:middle;
+}
+.questionresult .head .main span{
+	display:inline-block;
+	text-align: center;
+	width:48%;
+}
+
+.questionresult .head .cling span{
+	color:#009CF3;
+}
+.questionresult .main{
+	display:absolute;
+	left:-100px;
+}
+.questionresult .main .score{
+	margin:10px;
+}
+.questionresult .main .score .packname{
+	height:18px;
+	overflow:hidden;
+}
+.questionresult .main .score .time{
+	padding:10px 0px;
+}
+.questionresult .main .score .accurary{
+	margin:0px auto;
+	height:100px;
+	width:100px;
+	border:2px solid #009CF3;
+	border-radius:50px;
+	background-color:#FFFFFF;
+}
+.questionresult .main .score .accurary .text{
+	text-align:center;
+	margin-top:20px;
+	opacity:0.5;
+	
+}
+.questionresult .main .score .accurary .rightnum{
+	text-align:center;
+	font-size:24px;
+}
+.questionresult .main .score .accurary .rightnum .light{
+	font-size:30px;
+	color:#009CF3;
+}
+.questionresult .main .score ul{
+	padding:0px;
+	width:100%;
+}
+.questionresult .main .score ul li{
+	list-style:none;
+	float:left;
+	height:50px;
+	width:20%;
+	margin:10px 0px;
+}
+.questionresult .main .score ul li .item{
+	margin:0px auto;
+	width:50px;
+	height:50px;
+	border-radius:25px;
+	line-height:50px;
+	text-align:center;
+	color:#FFFFFF;
+}
+.questionresult .main .charts{
+	margin:10px;
+	padding:0px;
+	background-color:#FFFFFF;
+	display:absolute;
+}
+.questionresult .main .charts .top{
+	padding:30px 10px;
+	padding-bottom:0px;
+	display: -webkit-flex;
+    display: flex; 
+   
+}
+.questionresult .main .charts .top .flex-item:nth-child(1){
+	-webkit-flex: 1;
+    flex: 1;
+    padding-top:20px;
+    text-align:center;
+}
+.questionresult .main .charts .top .flex-item:nth-child(2){
+	-webkit-flex: 2;
+    flex: 2;
+    text-align:center;
+}
+.questionresult .main .charts .top .flex-item:nth-child(3){
+	-webkit-flex: 1;
+    flex: 1;
+    padding-top:20px;
+    text-align:center;
+}
+
+.questionresult .main .charts .top .flex-item .image1,
+.questionresult .main .charts .top .flex-item .image3{
+	position:relative;
+}
+
+.questionresult .main .charts .top .flex-item .image1 .crown,
+.questionresult .main .charts .top .flex-item .image3 .crown{
+	position:absolute;
+	top:-22px;
+	width:100%;
+	left:auto;
+	right:auto;
+}
+.questionresult .main .charts .top .flex-item .image1 img,
+.questionresult .main .charts .top .flex-item .image3 img{
+	border-radius:30px;
+}
+.questionresult .main .charts .top .flex-item .image2{
+	position:relative;
+}
+
+.questionresult .main .charts .top .flex-item .image2 .crown{
+	position:absolute;
+	top:-22px;
+	width:100%;
+	left:auto;
+	right:auto;
+}
+.questionresult .main .charts .top .flex-item .image2 img{
+	border-radius:40px;
+}
+/*.questionresult .main .charts .top .flex-item:nth-child(1) img,
+.questionresult .main .charts .top .flex-item:nth-child(3) img{
+	border-radius:30px;
+}
+.questionresult .main .charts .top .flex-item:nth-child(2) img{
+	border-radius:40px;
+}
+*/
+.questionresult .main .charts .list .student{
+	border-top:1px solid #F2F2F2;
+	padding:10px;
+	height:55px;
+}
+.questionresult .main .charts .list .student ul{
+	padding:0;
+}
+.questionresult .main .charts .list .student ul li{
+	list-style:none;
+	float:left;
+	padding:0px 4px;
+}
+.questionresult .main .charts .list .student ul li .no{
+	height:34px;
+	line-height:35px;
+	font-size:33px;
+}
+.questionresult .main .charts .list .student ul li .image img{
+	border-radius:17px;
+	-webkit-border-radius:17px;
+}
+.questionresult .main .charts .list .student ul li .name{
+	font-size:12px;
+}
+.questionresult .main .charts .list .student .num{
+	float:right;
+	float:right;
+	height:34px;
+	line-height:34px;
+}
+a{
+	color: #333333;
+}
+a:hover{
+	color: #009CF3;
+}
+a:link{
+	text-decoration: none;
+}
+
+.hiden{
+	display: none;
+}
+
+.clicked{
+	color:#009CF3;
+	border-bottom:3px solid #009CF3;
+}
+
+.trues{
+	background-color:#00C484;
+}
+.falses{
+	background-color:#FF4A4A;
+}
+.big{
+	font-size:24px;
+	color:#009CF3;
+}
+.small{
+	font-size:14px;
+	opacity:0.5;
+}

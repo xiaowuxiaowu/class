@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+  <title>微课堂</title>
+
+  <!-- Bootstrap -->
+  <link href="../public/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="../public/css/student/signresult.css">
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+    <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="container-fluid signresult" >
+    <div class="row head">
+      <div class="leftimg">
+        <span><a href="mycourse.html"><返回</a></span>
+      </div>
+      <div class="text">
+        <span>签到排行榜</span>
+      </div>
+      <div class="right" onclick="javascript:location.href='signhelp.html'">
+        <img src="../public/img/11.png" width="18" height="18">
+      </div>
+    </div><!-- end 头部导航 -->
+    <div class="row main">
+      <div class="charts" id="charts">
+        <div class="list">
+          <div class="student">
+            <div class="num"><span>2:56</span></div>
+            <ul>
+              <li><div class="no"><span>5</span></li>
+              <li><div class="image"><img src="../public/img/1.jpg" width="34" height="34"></div></li>
+              <li><div class="name">
+                    <span>我</span>
+                  </div></li>
+            </ul>
+          </div>
+          <div class="student">
+            <div class="num"><span>2:56</span></div>
+            <ul>
+              <li><div class="no"><img src="../public/img/27.png" width="24" height="24"></li>
+              <li><div class="image"><img src="../public/img/1.jpg" width="34" height="34"></div></li>
+              <li><div class="name">
+                    <span>唐金卡</span>
+                  </div></li>
+            </ul>
+          </div>
+          <div class="student">
+            <div class="num"><span>2:56</span></div>
+            <ul>
+              <li><div class="no"><img src="../public/img/28.png" width="24" height="24"></li>
+              <li><div class="image"><img src="../public/img/1.jpg" width="34" height="34"></div></li>
+              <li><div class="name">
+                    <span>唐集合</span>
+                  </div></li>
+            </ul>
+          </div>
+          <div class="student">
+            <div class="num"><span>2:56</span></div>
+            <ul>
+              <li><div class="no"><img src="../public/img/29.png" width="24" height="24"></li>
+              <li><div class="image"><img src="../public/img/1.jpg" width="34" height="34"></div></li>
+              <li><div class="name">
+                    <span>汤即可</span>
+                  </div></li>
+            </ul>
+          </div>
+          <div class="student">
+            <div class="num"><span>2:56</span></div>
+            <ul>
+              <li><div class="no"><span>4</span></li>
+              <li><div class="image"><img src="../public/img/1.jpg" width="34" height="34"></div></li>
+              <li><div class="name">
+                    <span>唐兵</span>
+                  </div></li>
+            </ul>
+          </div>
+          <div class="student">
+            <div class="num"><span>2:56</span></div>
+            <ul>
+              <li><div class="no"><span>5</span></li>
+              <li><div class="image"><img src="../public/img/1.jpg" width="34" height="34"></div></li>
+              <li><div class="name">
+                    <span>我</span>
+                  </div></li>
+            </ul>
+          </div>
+          <div class="student">
+            <div class="num"><span>2:56</span></div>
+            <ul>
+              <li><div class="no"><span>6</span></li>
+              <li><div class="image"><img src="../public/img/1.jpg" width="34" height="34"></div></li>
+              <li><div class="name">
+                    <span>唐兵</span>
+                  </div></li>
+            </ul>
+          </div>
+          <div class="student">
+            <div class="num"><span>2:56</span></div>
+            <ul>
+              <li><div class="no"><span>7</span></li>
+              <li><div class="image"><img src="../public/img/1.jpg" width="34" height="34"></div></li>
+              <li><div class="name">
+                    <span>唐兵</span>
+                  </div></li>
+            </ul>
+          </div>
+          <div class="student">
+            <div class="num"><span>2:56</span></div>
+            <ul>
+              <li><div class="no"><span>8</span></li>
+              <li><div class="image"><img src="../public/img/1.jpg" width="34" height="34"></div></li>
+              <li><div class="name">
+                    <span>唐兵</span>
+                  </div></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="../public/bootstrap/js/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script type="text/javascript">
+
+  //完成情况
+  function topleft(){
+    $("#topright").removeClass("clicked");
+    $("#topleft").addClass("clicked");
+    $("#charts").hide();
+    $("#score").show();
+  }
+  //答题结果
+  function topright(){
+    $("#topleft").removeClass("clicked");
+    $("#topright").addClass("clicked");
+    $("#score").hide();
+    $("#charts").show();
+  }
+ 
+</script>
+</body>
+</html>

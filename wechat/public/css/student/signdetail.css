@@ -1,0 +1,92 @@
+body{
+	background-color: #F2F2F2;
+}
+.signdetail{
+	font-size: 16px;
+}
+.signdetail .row .head{
+	height: 50px;
+	background-color: #FFFFFF;
+	box-shadow:0px 1px 1px #999999;
+}
+.signdetail .row .head .back{
+	position:absolute;
+	height: 50px;
+	top: 0px;
+	left: 10px; 
+	line-height: 50px;
+	vertical-align: middle;
+	float: left;
+}
+.signdetail .row .head .title{
+	line-height: 50px;
+	text-align:center;
+	vertical-align:middle;
+}
+.signdetail .row .head .right{
+	position:absolute;
+	height: 50px;
+	top: 0px;
+	right: 10px; 
+	line-height: 50px;
+	vertical-align: middle;
+	float: left;
+}
+.signdetail .row .body{
+	margin:10px;
+}
+.signdetail .row .body .signname{
+	height:24px;
+	width:100%;
+	overflow:hidden;
+}
+.signdetail .row .body .signpeople{
+	margin-top:20px;
+}
+.signdetail .row .body .tables{
+	margin-top:5px;
+}
+.signdetail .row .body .tables table{
+	width:100%;
+}
+.signdetail .row .body .tables table thead{
+	height:35px;
+	color:#FFFFFF;
+}
+.signdetail .row .body .tables table thead tr th{
+	line-height:35px;
+	text-align:center;
+	background-color:#009CF3;
+
+}
+.signdetail .row .body .tables table thead tr th:not(last-child){
+	border-right:1px solid #FFFFFF;
+}
+.signdetail .row .body .tables table tbody{
+	keight:35px;
+}
+.signdetail .row .body .tables table tbody tr td{
+	line-height:35px;
+	text-align:center;
+	background-color:#FFFFFF;
+	border-bottom:1px solid #F2F2F2;
+	
+}
+a{
+	color: #333333;
+}
+a:hover{
+	color: #009CF3;
+}
+a:link{
+	text-decoration: none;
+}
+.chong{
+	color:#009CF3;
+}
+.gren{
+	color:#20B944;
+}
+.red{
+	color:#FF0000;
+}

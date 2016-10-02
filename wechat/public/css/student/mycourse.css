@@ -1,0 +1,168 @@
+body{
+	background-color: #F2F2F2;
+}
+.mycourse{
+	font-size: 16px;
+}
+.mycourse .row .top{
+  height: 100px;
+  width: 100%;
+  background-image: url('../../img/21.jpeg');
+  background-size: cover;
+  -webkit-filter:opacity(.8);
+}
+.mycourse .row .top .back{
+	margin-left: 10px;
+	padding-top:10px;
+	height:30px;
+	line-height: 30px;
+	vertical-align: middle;
+	color:#FFFFFF;
+}
+.mycourse .row .top .classname{
+	margin-top: 10px;
+	margin-left: 15px;
+	height:30px;
+	line-height: 30px;
+	vertical-align: middle;
+	color:#FFFFFF;
+}
+.mycourse .row .top .teacher{
+	margin-left: 15px;
+	height:30px;
+	line-height: 30px;
+	vertical-align: middle;
+	color:#FFFFFF;
+}
+.mycourse .row .top .teacher .digit{
+	margin-right: 15px;
+	float: right;
+}
+.mycourse .row .middle{
+	height: 33px;
+	background-color:#FFFFFF;
+	overflow: hidden;
+}
+.mycourse .row .middle .sign{
+	margin-left: 15px;
+	height:33px;
+	width:130px;
+	line-height: 33px;
+	vertical-align: middle;
+	float:left;
+	text-align: center;
+}
+.mycourse .row .middle .do{
+	margin-right: 15px;
+	height:33px;
+	width:130px;
+	line-height: 33px;
+	vertical-align: middle;
+	float:right;
+	text-align: center;
+}
+.mycourse .row .sign .signlist{
+	margin-top: 10px;
+	padding-left: 15px;
+	padding-right: 15px;
+	height:50px;
+	background-color: #FFFFFF;
+}
+.mycourse .row .sign .signlist .time{
+	float:left;
+	line-height: 50px;
+	vertical-align: middle;
+
+}
+.mycourse .row .sign .signlist .time span{
+	font-size: 13px;
+}
+.mycourse .row .sign .signlist .name{
+	height:50px;
+	margin-left: 50px;
+	line-height: 50px;
+	vertical-align: middle;
+	overflow: hidden;
+}
+.mycourse .row .sign .signlist .statue{
+	height:50px;
+	float:right;
+	line-height: 50px;
+	vertical-align: middle;
+}
+
+.mycourse .row .sign .signlist .statue span{
+	padding: 2px 4px;
+}
+.mycourse .row .sign .signlist .statue span:hover{
+	opacity:0.5;
+}
+
+.mycourse .row .do .dolist{
+	margin-top: 10px;
+	padding-left: 15px;
+	padding-right: 15px;
+	height:50px;
+	background-color: #FFFFFF;
+}
+.mycourse .row .do .dolist .time{
+	float:left;
+	line-height: 50px;
+	vertical-align: middle;
+
+}
+.mycourse .row .do .dolist .time span{
+	font-size: 13px;
+}
+.mycourse .row .do .dolist .name{
+	height:50px;
+	margin-left: 50px;
+	line-height: 50px;
+	vertical-align: middle;
+	overflow: hidden;
+}
+
+
+.mycourse .row .do .dolist .statue{
+	height:50px;
+	float:right;
+	line-height: 50px;
+	vertical-align: middle;
+}
+
+.mycourse .row .do .dolist .statue span{
+	padding: 2px 4px;
+}
+.mycourse .row .do .dolist .statue span:hover{
+	opacity:0.5;
+}
+
+a{
+	color: #FFFFFF;
+}
+a:hover{
+	color: #009CF3;
+}
+a:link{
+	text-decoration: none;
+}
+.mar{
+	margin-right:10px;
+}
+.click{
+	color:#009CF3;
+	border-bottom: 3px solid #009CF3;
+}
+.signed{
+	color:#009CF3;
+	border:1px solid #009CF3;
+	border-radius:5px;
+}
+.notsign{
+	color:#FF0000;
+	border:1px solid #FF0000;
+	border-radius:5px;
+}
+.hiden{
+	display: none;
+}

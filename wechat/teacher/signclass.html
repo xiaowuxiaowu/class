@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+  <title>微课堂</title>
+
+  <!-- Bootstrap -->
+  <link href="../public/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="../public/css/signclass.css">
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+    <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="container-fluid signclass">
+    <div class="row">
+      <div class="head">
+        <div class="back"><a href="teacher.html"><返回</a></div> 
+        <div class="title">
+          <span>考勤</span>
+        </div>
+        <div class="right" onclick="javascript:location.href='signhand.html'"><img src="../public/img/3.png" width="18" height="18"></div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="body">
+        <div class="signname">
+          <div class="form-group">
+            <div class="left"><span>考勤名称:</span></div>
+            <div class="name">
+              <!-- <input type="text" class="form-control"  onfocus="on_focus();" placeholder="请输入上课地点"> -->
+              <span>看见了撒大奶牛</span>
+            </div>
+          </div>
+        </div>
+        <div class="signbody">
+          <div class="top">
+            <span>共签到：<span class="bcolor">80</span>/100人</span>
+            <div class="clas">
+              <div class="span1 signspan1" id="signspan1" onclick="signclass();"><span>班级</span></div>
+              <div class="span2 signspan2" id="signspan2" onclick="signall();"><span>全部</span></div>
+            </div>
+          </div>
+          <div class="main" id="tableclass">
+            <table>
+              <thead>
+                <tr>
+                  <th>班级</th>
+                  <th>签到情况<div class="ths"><span class="glyphicon glyphicon-triangle-bottom"></span></div></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>14信息安全一班</td>
+                  <td><span class="bcolor">13</span>/30人</td>
+                </tr>
+                <tr>
+                  <td>14信息安全一班</td>
+                  <td><span class="bcolor">13</span>/30人</td>
+                </tr>
+                <tr>
+                  <td>14计算机科学与技术一班</td>
+                  <td><span class="bcolor">13</span>/30人</td>
+                </tr>
+                <tr>
+                  <td>14计算机科学与技术一班</td>
+                  <td><span class="bcolor">13</span>/30人</td>
+                </tr>
+                <tr>
+                  <td>14计算机科学与技术一班</td>
+                  <td><span class="bcolor">13</span>/30人</td>
+                </tr>
+                <tr>
+                  <td>14计算机科学与技术一班</td>
+                  <td><span class="bcolor">13</span>/30人</td>
+                </tr><tr>
+                  <td>14计算机科学与技术一班</td>
+                  <td><span class="bcolor">13</span>/30人</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="wrap" id="wrapall">
+            <div class="all" onclick="showsign(1);">
+              <div class="alltop">
+                <div class="signico">
+                  <span class="glyphicon glyphicon-triangle-bottom" id="leftico1"></span>
+                </div>
+                <div class="signname">
+                  <span>14信息安全一班</span>
+                </div>
+                <div class="signnum">
+                  <span><span class="bcolor">13</span>/30人</span>
+                </div>
+              </div>
+              <div class="detail" id="detail1">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>学号</th>
+                      <th>姓名</th>
+                      <th>签到状态</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>1405030402</td>
+                      <td>唐兵</td>
+                      <td><span class="rcolor">未到</span></td>
+                    </tr>
+                    <tr>
+                      <td>1405030402</td>
+                      <td>唐兵</td>
+                      <td><span class="rcolor">未到</span></td>
+                    </tr>
+                    <tr>
+                      <td>1405030402</td>
+                      <td>唐兵</td>
+                      <td><span class="gcolor">已到</span></td>
+                    </tr>
+                    <tr>
+                      <td>1405030402</td>
+                      <td>唐兵</td>
+                      <td><span class="gcolor">已到</span></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="all" onclick="showsign(2);">
+              <div class="alltop">
+                <div class="signico">
+                  <span class="glyphicon glyphicon-triangle-right" id="leftico2"></span>
+                </div>
+                <div class="signname">
+                  <span>14信息安全一班</span>
+                </div>
+                <div class="signnum">
+                  <span><span class="bcolor">14</span>/30人</span>
+                </div>
+              </div>
+              <div class="detail hiden" id="detail2">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>学号</th>
+                      <th>姓名</th>
+                      <th>签到状态</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>1405030402</td>
+                      <td>唐兵</td>
+                      <td><span class="rcolor">未到</span></td>
+                    </tr>
+                    <tr>
+                      <td>1405030402</td>
+                      <td>唐兵</td>
+                      <td><span class="rcolor">未到</span></td>
+                    </tr>
+                    <tr>
+                      <td>1405030402</td>
+                      <td>唐兵</td>
+                      <td><span class="gcolor">未到</span></td>
+                    </tr>
+                    <tr>
+                      <td>1405030402</td>
+                      <td>唐兵</td>
+                      <td><span class="gcolor">未到</span></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <div class="signstop">
+            <span class="hiden">考勤已结束!</span>
+          </div>
+          <div class="bottom1">
+            <button onclick="endsign()">结束考勤</button>
+          </div>
+          <div class="bottom2 hiden">
+            <button onclick="continuesign()">继续签到</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="../public/bootstrap/js/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script type="text/javascript">
+  //保存考勤名称
+  function on_focus()
+  {
+    $("#savesignname").show();
+  }
+  //班级
+  function signclass(){
+    $("#signspan1").removeClass("signspan2");
+    $("#signspan1").addClass("signspan1");
+    $("#signspan2").removeClass("signspan1");
+    $("#signspan2").addClass("signspan2");
+    $("#wrapall").hide();
+    $("#tableclass").show();
+
+  }
+  //全部
+  function signall(){
+    $("#signspan2").removeClass("signspan2");
+    $("#signspan2").addClass("signspan1");
+    $("#signspan1").removeClass("signspan1");
+    $("#signspan1").addClass("signspan2");
+    $("#tableclass").hide();
+    $("#wrapall").show();
+  }
+
+  //全部签到显示下拉
+  function showsign(num){
+    $("#detail"+num).toggle();
+    var dis=$("#detail"+num).css("display");
+    if("block"==dis){
+      $("#leftico"+num).removeClass("glyphicon-triangle-right");
+      $("#leftico"+num).addClass("glyphicon-triangle-bottom");
+    }else{
+      $("#leftico"+num).removeClass("glyphicon-triangle-bottom");
+      $("#leftico"+num).addClass("glyphicon-triangle-right");
+    }
+  }
+  //结束考勤 
+  function endsign(){
+    $(".bottom1").hide();
+    $(".bottom2").show();
+  }
+  //继续签到
+  function continuesign(){
+    $(".bottom2").hide();
+    $(".bottom1").show();
+  }
+</script>
+
+</body>
+</html>
