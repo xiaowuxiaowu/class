@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+  <title>微课堂</title>
+
+  <!-- Bootstrap -->
+  <link href="../public/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="../public/css/teacher.css">
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+    <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <!-- begin 外部容器 -->
+  <div class="container-fluid teacher">
+    
+    <div class="row head">
+      <div class="leftimg">
+        <span onclick="showslide();"><img src="../public/img/2.png" width="18" height="18"></span>
+      </div>
+      <div class="rightimg" >
+         <span class="hiden" onclick="adds();" id="adds"><img src="../public/img/3.png" width="18" height="18"></span>
+      </div>
+      <div class="main">
+        <span class="clicked" id="topleft" onclick="topleft()">正在上课(1)</span>
+        <span  onclick="topright()" id="topright">我的课程(2)</span>
+      </div>
+    </div><!-- end 头部导航 -->
+
+    <!-- begin 正在上课 -->
+    <div class="row classing" id="classing">
+      <div class=" bod">
+        <div class="borde">
+          <div class="headimg"><img src="../public/img/1.jpg"></div>
+          <div class="list">
+            <ul>
+              <li class="weight">JAVA课程设计<span class="ttag">做题中</span><span class="ttag">签到中</span></li>
+              <li><span class="glyphicon glyphicon-user opaty"></span><span class="opaty mright" >唐兵</span></li>
+              <li><span class="glyphicon glyphicon-map-marker opaty"></span><span class="opaty mright" >五教102</span></li>
+              <li><span class="glyphicon glyphicon-time opaty"></span><span class="opaty mright" >2016-07-07 8:00</span></li>
+            </ul>
+            <div class="btn1">
+              <span>
+                <!-- 老师按钮 -->
+                <button type="button" id="but1"  onclick="javascript:location.href='signstart.html'">发起考勤</button>
+                <button type="button" id="but0" class="hiden" onclick="javascript:location.href='signclass.html'">考勤结果</button>
+                
+                <!-- 学生按钮 -->
+                <button type="button" id="but6" class="hiden" onclick="javascript:location.href='signsucced.html'">签到</button>
+                <button type="button" id="but7" class="hiden" onclick="javascript:location.href='signdetail.html'">考勤结果</button>
+              </span>
+              <span>
+                <!-- 老师按钮 -->
+                <button type="button" id="but2"  onclick="javascript:location.href='pushexam.html'">推送试题</button>
+                <button type="button" id="but3" class="hiden" onclick="javascript:location.href='pushresult.html'">答题情况</button>
+                
+                <!-- 学生按钮 -->
+                <button type="button" id="but8" class="hiden" onclick="javascript:location.href='pushresult.html'">做题</button>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bottm">
+        <div class="endclass" id="but4" onclick="dele()">
+          <span>结束上课</span>
+        </div>
+        <div class="conticlass hiden" id="but5" onclick="conticlass()">
+          <span>继续上课</span>
+        </div>
+      </div>
+      <div class="mask hiden" id="mask" onclick="cancell()"></div>
+      <div class="pash hiden" id="pash">
+        <div class="text"><span>确定结束上课吗?</span></div>
+        <div class="but">
+          <div class="right" onclick="endclass()"><span>结束</span></div>
+          <div class="left" onclick="cancell()"><span>取消</span></div>
+        </div>
+      </div>
+    </div><!-- end 正在上课 -->
+  </div><!-- end 外部容器 -->
+
+  <!-- begin 外部容器 -->
+  <div class="container-fluid teacher hiden" id="classlist1">
+
+    <!-- begin 课程列表 -->
+    <div class="row">
+      <div class="classlist" onclick="ownercourse();">
+        <img src="../public/img/1.jpg" width="50" height="50">
+        <div class="info">
+          <span class="spanname">JAVA课程设计</span><span class="ttag">上课中</span><br/>
+          <span class="mright opaty">唐兵</span><span class="opaty">100人</span>
+        </div>
+      </div>
+      <div class="classlist" onclick="ownercourse();">
+        <img src="../public/img/1.jpg" width="50" height="50">
+        <div class="info">
+          <span class="spanname">JAVA课程设计</span><span class="ttag1">未开始</span><br/>
+          <span class="mright opaty">唐兵</span><span class="opaty">100人</span>
+        </div>
+      </div>
+    </div>
+    <!-- end 课程列表 -->
+  </div><!-- end 外部容器 -->
+
+  <!-- begin 侧滑 -->
+  <div class="bordslide">
+    <div class="teachall" onclick="hideslide();">
+    </div>
+    <div class="teachslide">
+      <div class="head">
+        <div class="slideconcel" onclick="hideslide();">
+          <span class="glyphicon glyphicon-remove"></span>
+        </div>
+        <div class="picture">
+          <img src="../public/img/1.jpg">
+        </div>
+        <div class="name">
+          <span>唐兵</span>
+        </div>
+      </div>
+      <div class="body">
+        <ul>
+          <li><img src="../public/img/7.png" width="18" height="18" class="vertop mright"><a href="#">首页</a></li>
+          <li><img src="../public/img/8.png" width="18" height="18" class="vercenter mright"></span><a href="#">问题反馈</a></li>
+          <li><img src="../public/img/9.png" width="18" height="18" class="vertop mright"></span><a href="#">帮助说明</a></li>
+        </ul>
+      </div>
+    </div>
+  </div><!-- begin 侧滑 -->
+
+  <!-- begin 添加 -->
+  <div class="add hiden">
+    <div class="bot" onclick="adds();"></div>
+    <div class="trig"></div>
+    <div class="body">
+      <ul>
+        <li><img src="../public/img/10.png" width="18" height="18" class="amright"><a href="newcourse.html">新建课程</a></li>
+        <li><img src="../public/img/15.png" width="18" height="18" class="amright"><a href="leading.html">导入教务课程</a></li>
+        <li><img src="../public/img/12.png" width="18" height="18" class="amright"><a href="addcourse.html">输入课程码</a></li>
+      </ul>
+    </div>
+  </div>
+  <!-- end 添加 -->
+  
+<script type="text/javascript">
+  function ownercourse(){
+    location.href='mycourse.html';
+  }
+  //添加模块
+  function adds(){
+    $(".add").toggle();
+  }
+  //正在上课
+  function topleft(){
+    $("#adds").hide();
+    $("#classlist1").hide();
+    $("#classing").show();
+    $("#topright").removeClass("clicked");
+    $("#topleft").addClass("clicked");
+  }
+  //我的课程
+  function topright(){
+    $("#adds").show();
+    $("#classing").hide();
+    $("#classlist1").show();
+    $("#topleft").removeClass("clicked");
+    $("#topright").addClass("clicked");
+  }
+  //显示侧边栏
+  function showslide(){
+    $(".bordslide").show("10",function(){
+      $(".add").hide();
+      $(".teachall").show();
+      $(".teachslide").animate({left:"0px"},"100",function(){
+      });
+    });
+  }
+  //隐藏侧边栏
+  function hideslide(){
+    $(".teachslide").animate({left:"-222px"},"100",function(){
+      $(".bordslide").hide();
+      $(".teachall").hide();
+    });
+  }
+  //删除提示
+  function dele(){
+    $("#mask").show();
+    $("#pash").show();
+  }
+  //隐藏删除提示
+  function cancell(){
+    $("#mask").hide();
+    $("#pash").hide();
+  }
+  //确定结束课程
+  function endclass(){
+    $("#mask").hide();
+    $("#pash").hide();
+    $("#but4").hide();
+    $("#but5").show();
+    $("#but1").css("background-color","#BCBCBC");
+    $("#but1").removeAttr("onclick");
+    $("#but2").css("background-color","#BCBCBC");
+    $("#but2").removeAttr("onclick");
+    $("#but3").css("background-color","#BCBCBC");
+    $("#but3").removeAttr("onclick");
+  }
+  //继续上课
+  function conticlass(){
+    $("#but5").hide();
+    $("#but4").show();
+    $("#but1").css("background-color","#009CF3");
+    $("#but1").attr("onclick","javascript:location.href='signstart.html'");
+    $("#but2").css("background-color","#009CF3");
+    $("#but2").attr("onclick","javascript:location.href='pushexam.html'");
+    $("#but3").css("background-color","#009CF3");
+    $("#but3").attr("onclick","javascript:location.href='pushresult.html'");
+  }
+</script>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="../public/bootstrap/js/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+</body>
+</html>
